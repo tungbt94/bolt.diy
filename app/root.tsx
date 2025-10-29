@@ -142,6 +142,28 @@ export default function App() {
       .catch((error) => {
         logStore.logError('Failed to initialize debug logging', error);
       });
+
+    // Auto-connect to Vercel if environment token is available
+    import('./lib/stores/vercel')
+      .then(({ autoConnectVercel }) => {
+        autoConnectVercel().catch((error) => {
+          console.error('Failed to auto-connect to Vercel:', error);
+        });
+      })
+      .catch((error) => {
+        logStore.logError('Failed to initialize Vercel connection', error);
+      });
+
+    // Auto-connect to Netlify if environment token is available
+    import('./lib/stores/netlify')
+      .then(({ initializeNetlifyConnection }) => {
+        initializeNetlifyConnection().catch((error) => {
+          console.error('Failed to auto-connect to Netlify:', error);
+        });
+      })
+      .catch((error) => {
+        logStore.logError('Failed to initialize Netlify connection', error);
+      });
   }, []);
 
   return (
