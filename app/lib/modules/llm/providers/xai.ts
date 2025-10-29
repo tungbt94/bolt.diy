@@ -13,10 +13,16 @@ export default class XAIProvider extends BaseProvider {
   };
 
   staticModels: ModelInfo[] = [
+    { name: 'grok-4-fast-reasoning', label: 'xAI Grok 4 Fast Reasoning', provider: 'xAI', maxTokenAllowed: 256000 },
+    {
+      name: 'grok-4-fast-non-reasoning',
+      label: 'xAI Grok 4 Fast Non-Reasoning',
+      provider: 'xAI',
+      maxTokenAllowed: 256000,
+    },
     { name: 'grok-4', label: 'xAI Grok 4', provider: 'xAI', maxTokenAllowed: 256000 },
     { name: 'grok-4-07-09', label: 'xAI Grok 4 (07-09)', provider: 'xAI', maxTokenAllowed: 256000 },
     { name: 'grok-3-mini', label: 'xAI Grok 3 Mini', provider: 'xAI', maxTokenAllowed: 131000 },
-    { name: 'grok-3-mini-fast', label: 'xAI Grok 3 Mini Fast', provider: 'xAI', maxTokenAllowed: 131000 },
     { name: 'grok-code-fast-1', label: 'xAI Grok Code Fast 1', provider: 'xAI', maxTokenAllowed: 131000 },
   ];
 
