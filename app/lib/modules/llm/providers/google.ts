@@ -33,6 +33,51 @@ export default class GoogleProvider extends BaseProvider {
       maxTokenAllowed: 1000000,
       maxCompletionTokens: 8192,
     },
+
+    // Gemini 2.0 Flash Lite: 1M context window, 8K output limit, fast and cost-effective
+    {
+      name: 'gemini-2.0-flash-lite',
+      label: 'Gemini 2.0 Flash-Lite',
+      provider: 'Google',
+      maxTokenAllowed: 1000000,
+      maxCompletionTokens: 8192,
+    },
+
+    // Gemini 2.0 Flash: 1M context, Our most balanced multimodal model with great performance across all tasks, with a 1 million token context window, and built for the era of Agents.
+    {
+      name: 'gemini-2.0-flash',
+      label: 'Gemini 2.0 Flash',
+      provider: 'Google',
+      maxTokenAllowed: 1000000,
+      maxCompletionTokens: 8192,
+    },
+
+    // Gemini 2.5 Flash Lite: 1M context window, Our smallest and most cost effective model, built for at scale usage.
+    {
+      name: 'gemini-2.5-flash-lite',
+      label: 'Gemini 2.5 Flash-Lite',
+      provider: 'Google',
+      maxTokenAllowed: 1000000,
+      maxCompletionTokens: 8192,
+    },
+
+    // Gemini 2.5 Flash: 1M context, Our first hybrid reasoning model which supports a 1M token context window and has thinking budgets.
+    {
+      name: 'gemini-2.5-flash',
+      label: 'Gemini 2.5 Flash',
+      provider: 'Google',
+      maxTokenAllowed: 1000000,
+      maxCompletionTokens: 8192,
+    },
+
+    // Gemini 2.5 Pro: Our state-of-the-art multipurpose model, which excels at coding and complex reasoning tasks.
+    {
+      name: 'gemini-2.5-pro',
+      label: 'Gemini 2.5 Pro',
+      provider: 'Google',
+      maxTokenAllowed: 1000000,
+      maxCompletionTokens: 8192,
+    },
   ];
 
   async getDynamicModels(
